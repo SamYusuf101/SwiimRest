@@ -4,6 +4,7 @@ import About from '../components/About'
 import Main from '../components/main'
 import Nav from '../components/Nav'
 import Navbar from '../components/Navbar'
+import Skills from '../components/Skills'
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <Nav />
       <About />
+      <Skills />
       
     </div>
   )
