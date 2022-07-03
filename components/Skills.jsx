@@ -10,12 +10,84 @@ const Skills = () => {
                 <h2 className='py-4'>What i can do</h2>
                 <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                     <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                    <div className='m-auto'>
-                       <Image src="/../public/assets/html.png" alt="/" width='64px' height='64px' />
-                       
-                    </div> 
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/html.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>HTML</h3>
+                            </div>
+                        </div>
                     </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/javascript.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>JAVASCRIPT</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/tailwind.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>TAILWIND</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/github1.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>GITHUB</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/react.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>REACT</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/css.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>CSS</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/chatbot.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>CHATBOT</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <Image src="/../public/assets/amplify.png" alt="/" width='64px' height='64px' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>AMPLIFY</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
