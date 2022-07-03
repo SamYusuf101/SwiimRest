@@ -9,7 +9,7 @@ function Main() {
         Let's build something together
         </p>
          <h1 className='py-8 text-red-700'>
-         Hi, I'm <span className='text-[#5651e5]'>Sam</span>
+         Hi, I'm <span className='text-[#5651e5]'>Sa</span>
          </h1> 
          
         </div>
