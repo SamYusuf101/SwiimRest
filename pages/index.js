@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import About from '../components/About'
-import Main from '../components/main'
-import Nav from '../components/Nav'
+import Body from '../components/body'
+
+import Contacts from '../components/Contacts'
+
+
 import Navbar from '../components/Navbar'
 import Projects from '../components/projects'
 import Skills from '../components/Skills'
-import Work from '../components/work'
+
 
 
 export default function Home() {
@@ -18,10 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Nav />
+      <Body/>
       <About />
       <Skills />
-      <Work />
+      <Projects />
+      <Contacts />
       
     </div>
   )
