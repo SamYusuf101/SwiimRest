@@ -62,7 +62,9 @@ const Navbar = () => {
             : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
             <div>
               <div className='flex w-full items-center justify-between '>
+              <Link href='/'>
                 <Image src="/../public/assets/logo.png" alt="/" width='95' height='55' />
+                </Link>
                 <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                   <AiOutlineClose />
                 </div>
@@ -73,20 +75,21 @@ const Navbar = () => {
             </div>
             <div className='py-4 flex flex-col'>
               <ul className='uppercase'>
+              
                 <Link href="/">
-                  <li className='py-4 text-sm'>Home</li>
+                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Home</li>
                 </Link>
-                <Link href="/">
-                  <li className='py-4 text-sm'>About</li>
+                <Link href="/#about">
+                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>About</li>
                 </Link>
-                <Link href="/">
-                  <li className='py-4 text-sm'>Skills</li>
+                <Link href="/#skills">
+                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Skills</li>
                 </Link>
-                <Link href="/">
-                  <li className='py-4 text-sm'>Projects</li>
+                <Link href="/#projects">
+                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Projects</li>
                 </Link>
-                <Link href="/">
-                  <li className='py-4 text-sm'>Contact</li>
+                <Link href="/#contacts">
+                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Contact</li>
                 </Link>
               </ul>
               <div className='my-20'>
