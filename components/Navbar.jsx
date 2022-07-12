@@ -4,10 +4,29 @@ import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/Fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import {useRouter} from 'next/router';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [shadow, setShadow] = useState(false)
+  const [navBg, setNavBg] = useState('#ecf0f3')
+  const [linkColor, setLinkColor] = useState('#1f2937')
+  const router=useRouter()
+
+  useEffect(() => {
+     if(
+      router.asPath === '/cryptoTracker' ||
+      router.asPath === '/Nftapp'
+
+     ){
+      setNavBg('transparent')
+      setLinkColor('#f8f8f8')
+     }else{
+      setNavBg('#ecf0f3')
+      setLinkColor('#1f2937')
+     }
+
+  },[router])
 
   const handleNav = () => {
     setNav(!nav)
@@ -25,13 +44,15 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
+    <div 
+    style={{backgroundColor: `${navBg}`}}
+    className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
       <div className='flex justify-between items-center  px-2 2xl:px-16'>
         <Link href='/'>
-          <Image src="/../public/assets/logo.png" alt="/" width='125' height='80' />
+          <Image src="/../public/assets/kulcode.png" alt="/" width='135' height='100' />
         </Link>
         <div>
-          <ul className='hidden md:flex'>
+          <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
             <Link href='/'>
               <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400'>Home</li>
             </Link>
