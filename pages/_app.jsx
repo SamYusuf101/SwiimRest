@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Navbar from '../components/Navbar'
 import '../styles/globals.css'
 

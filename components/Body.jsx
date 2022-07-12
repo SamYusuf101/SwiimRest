@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/Fa';

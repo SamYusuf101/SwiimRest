@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import cryptoImg from '../public/assets/crypto.jpg';
 import nftImg from  '../public/assets/nft.png';
