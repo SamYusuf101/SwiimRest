@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Head from 'next/head';
 import About from '../components/About';
-import Body from '../components/body';
+import Body from '../components/Body';
 import Contacts from '../components/Contacts'
 
 import Projects from '../components/projects'
