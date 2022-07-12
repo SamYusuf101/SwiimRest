@@ -6,7 +6,7 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
-        "plugin:@next/nesxt/recommended"
+        "plugin:@next/next/recommended"
     ],
     
     "parserOptions": {
