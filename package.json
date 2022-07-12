@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node index.js",
+    "start": "node pages/index.js",
     "lint": "next lint"
   },
   "dependencies": {
