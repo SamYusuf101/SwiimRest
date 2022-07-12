@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/Fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import {useRouter} from 'next/router';
 
