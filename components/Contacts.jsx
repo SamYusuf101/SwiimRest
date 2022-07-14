@@ -3,7 +3,7 @@ import React from 'react';
 import contactImg from '../public/assets/contact.jpg';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AiOutlineArrowUp,  } from 'react-icons/ai';
+import { AiOutlineArrowUp, AiOutlineMail,  } from 'react-icons/ai';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 
