@@ -19,19 +19,19 @@ const Projects = () => {
                     projectUrl='/cryptoTracker' 
                     />
                     <ProjectItems 
-                    title='Nftapp' 
+                    title='Nft App' 
                     backgroundImg={nftImg} 
                     projectUrl='/Nftapp' 
                     />
                     <ProjectItems
-                    title='CryptoTracker' 
+                    title='News App' 
                     backgroundImg={newsImg} 
-                    projectUrl='/cryptoTracker' 
+                    projectUrl='/Newsapp' 
                     />
                     <ProjectItems 
-                    title='CryptoTracker' 
+                    title='UberEats UI' 
                     backgroundImg={uberImg} 
-                    projectUrl='/cryptoTracker' 
+                    projectUrl='/UberEats' 
                     />
                 </div>
             </div>
