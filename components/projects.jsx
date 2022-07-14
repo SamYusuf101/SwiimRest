@@ -4,6 +4,7 @@ import cryptoImg from '../public/assets/crypto.jpg';
 import nftImg from  '../public/assets/nft.png';
 import newsImg from  '../public/assets/news.png';
 import uberImg from  '../public/assets/uber.png';
+import uberdriverImg from  '../public/assets/uberdriver.jpg';
 import ProjectItems from './ProjectItems';
 
 const Projects = () => {
@@ -23,15 +24,20 @@ const Projects = () => {
                     backgroundImg={nftImg} 
                     projectUrl='/Nftapp' 
                     />
-                    <ProjectItems
-                    title='News App' 
-                    backgroundImg={newsImg} 
-                    projectUrl='/Newsapp' 
-                    />
                     <ProjectItems 
                     title='UberEats UI' 
                     backgroundImg={uberImg} 
                     projectUrl='/UberEats' 
+                    />
+                    <ProjectItems 
+                    title='UberEats Courier UI' 
+                    backgroundImg={uberdriverImg} 
+                    projectUrl='/UberDriver' 
+                    />
+                    <ProjectItems
+                    title='News App' 
+                    backgroundImg={newsImg} 
+                    projectUrl='/Newsapp' 
                     />
                 </div>
             </div>
