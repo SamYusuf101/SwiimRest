@@ -8,7 +8,7 @@ import reactImg from '../public/assets/react.png';
 import tailwindImg from '../public/assets/tailwind.png';
 import javascriptImg from '../public/assets/javaScript.png';
 import chatfuelImg from '../public/assets/chatfuel.png';
-import ampliyImg from '../public/assets/amplify.png';
+import amplifyImg from '../public/assets/amplify.png';
 
 const Skills = () => {
     return (
@@ -90,7 +90,7 @@ const Skills = () => {
                     <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                             <div className='m-auto'>
-                                <Image src={ampliyImg} alt='/' width='65px' height='65px' />
+                                <Image src={amplifyImg} alt='/' width='65px' height='65px' />
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <h3>AMPLIFY</h3>
