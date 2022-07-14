@@ -22,8 +22,9 @@ const cryptoTracker = () => {
            <p>Project</p>
            <h2>Overview</h2>
            <p>This cross-platform mobile application lets you see the current crypto price in real time and lets you track your crypto assets in your portfolio. This app is optimized for different screen sizes and orientations.</p>
-        
+        <Link href = 'https://github.com/SamYusuf101/CryptoTracker'>
         <button className='px-8 py-2 mt-4'>Code</button>
+         </Link>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
         <div className='p-2'>
