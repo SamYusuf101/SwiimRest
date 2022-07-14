@@ -4,7 +4,8 @@ import kulcodeImg from '../public/assets/kulcode.png';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 import {useRouter} from 'next/router';
 
 const Navbar = () => {
@@ -122,25 +123,18 @@ const Navbar = () => {
               <div className='my-20'>
                 <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
                 <div className='flex items-center justify-between my-4 w-full sm:[80%]'>
-                <Link href='https://www.linkedin.com/in/sam-yusuf-0753601a9'>
-                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaLinkedinIn />
-                </div>
-                </Link>
-                <Link href= 'https://github.com/SamYusuf101'>
-                <div className="my-2  rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaGithub />
-                </div>
-                </Link>
-                
-                <Link href='https://www.instagram.com/kulcode/'>
-                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaInstagram />
-                </div>
-                </Link>
-                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <AiOutlineMail />
-              </div>
+                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaLinkedinIn />
+                  </div>
+                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaGithub />
+                  </div>
+                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <AiOutlineMail />
+                  </div>
+                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <BsFillPersonLinesFill />
+                  </div>
                 </div>
               </div>
             </div>
