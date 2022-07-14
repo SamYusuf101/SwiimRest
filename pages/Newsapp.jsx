@@ -3,11 +3,10 @@ import Image from 'next/image';
 import React from 'react';
 import newsImg from  '../public/assets/news.png';
 import {RiRadioButtonFill} from 'react-icons/ri'
-import uberImg from  '../public/assets/uber.png';
 import Link from 'next/link';
 
 
-const Nftapp = () => {
+const Newsapp = () => {
   return (
     <div className='w-full'>
      <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
@@ -50,4 +49,4 @@ const Nftapp = () => {
   )
 }
 
-export default Nftapp
+export default Newsapp

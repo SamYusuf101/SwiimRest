@@ -17,7 +17,7 @@ const Projects = () => {
                     <ProjectItems 
                     title='CryptoTracker' 
                     backgroundImg={cryptoImg} 
-                    projectUrl='/cryptoTracker' 
+                    projectUrl='/crypt' 
                     />
                     <ProjectItems 
                     title='Nft App' 

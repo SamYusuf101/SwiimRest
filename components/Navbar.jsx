@@ -18,7 +18,12 @@ const Navbar = () => {
   useEffect(() => {
      if(
       router.asPath === '/cryptoTracker' ||
-      router.asPath === '/Nftapp'
+      router.asPath === '/Nftapp' || 
+      router.asPath === '/Newsapp' ||
+      router.asPath === '/UberDriver' || 
+      router.asPath === '/UberEats'  
+
+
 
      ){
       setNavBg('transparent')
