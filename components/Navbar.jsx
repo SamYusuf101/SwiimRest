@@ -1,5 +1,6 @@
 /* eslint-disable */
 import Image from 'next/image';
+import kulcodeImg from '../public/assets/kulcode.png';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
@@ -50,7 +51,7 @@ const Navbar = () => {
     className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
       <div className='flex justify-between items-center  px-2 2xl:px-16'>
         <Link href='/'>
-          <Image src="/../public/assets/uber.png" alt="/" width='135' height='100' />
+          <img src={kulcodeImg}></img>
         </Link>
         <div>
           <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
