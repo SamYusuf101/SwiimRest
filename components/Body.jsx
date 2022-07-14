@@ -1,9 +1,11 @@
 /* eslint-disable */
 import React from "react";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
+import {  AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Typed from "react-typed";
+import Link from "next/link";
+import {FaInstagram} from 'react-icons/fa'
 
 const Body = () => {
   return (
@@ -32,18 +34,22 @@ const Body = () => {
             applications while learning back-end technologies
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+             <Link href='https://www.linkedin.com/in/sam-yusuf-0753601a9'>
             <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <FaLinkedinIn />
             </div>
+            </Link>
+            <Link href= 'https://github.com/SamYusuf101'>
             <div className="my-2  rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <FaGithub />
             </div>
+            </Link>
+            
+            <Link href='https://www.instagram.com/kulcode/'>
             <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail />
+              <FaInstagram />
             </div>
-            <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <BsFillPersonLinesFill />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

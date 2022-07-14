@@ -3,10 +3,9 @@ import React from 'react';
 import contactImg from '../public/assets/contact.jpg';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AiOutlineArrowUp, AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { HiOutlineChevronDoubleUp } from 'react-icons/bs';
+import { AiOutlineArrowUp,  } from 'react-icons/ai';
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+
 
 
 const Contacts = () => {
@@ -29,18 +28,22 @@ const Contacts = () => {
                             <div>
                                 <p className='uppercase pt-8'>Connect with me</p>
                                 <div className='flex items-center justify-between py-4'>
-                                    <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <FaLinkedinIn />
-                                    </div>
-                                    <div className='my-2  rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <FaGithub />
-                                    </div>
-                                    <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <AiOutlineMail />
-                                    </div>
-                                    <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <BsFillPersonLinesFill />
-                                    </div>
+                                <Link href='https://www.linkedin.com/in/sam-yusuf-0753601a9'>
+                                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                                  <FaLinkedinIn />
+                                </div>
+                                </Link>
+                                <Link href= 'https://github.com/SamYusuf101'>
+                                <div className="my-2  rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                                  <FaGithub />
+                                </div>
+                                </Link>
+                                
+                                <Link href='https://www.instagram.com/kulcode/'>
+                                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                                  <FaInstagram />
+                                </div>
+                                </Link>
                                 </div>
                             </div>
                         </div>
