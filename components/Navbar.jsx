@@ -51,7 +51,7 @@ const Navbar = () => {
     className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
       <div className='flex justify-between items-center  px-2 2xl:px-16'>
         <Link href='/'>
-          <Image src={kulcodeImg} alt='/' width='75px' height='75px' />
+          <Image src={kulcodeImg} alt='/' width='85px' height='85px' />
         </Link>
         <div>
           <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
@@ -86,7 +86,7 @@ const Navbar = () => {
             <div>
               <div className='flex w-full items-center justify-between '>
               <Link href='/'>
-                <Image src="/../public/assets/logo.png" alt="/" width='95' height='55' />
+                <Image src={kulcodeImg} alt='/' width='85px' height='85px' />
                 </Link>
                 <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                   <AiOutlineClose />
