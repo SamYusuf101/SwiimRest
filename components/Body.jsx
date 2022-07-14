@@ -18,7 +18,7 @@ const Body = () => {
           </h1>
           <h1 className="py-2 text-gray-700">
             A Front-End 
-            <Typed className="pl-4 text-[#5651e5]" 
+            <Typed className="pl-2 text-[#5651e5]" 
               strings={['Web', 'mobile']}
               typeSpeed={150}
               backSpeed={90}
