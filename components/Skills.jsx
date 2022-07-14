@@ -6,7 +6,7 @@ import cssImg from '../public/assets/css.png';
 import github1Img from '../public/assets/github1.png';
 import reactImg from '../public/assets/react.png';
 import tailwindImg from '../public/assets/tailwind.png';
-import javascriptImg from '../public/assets/javaScript.png';
+import javascriptImg from '../public/assets/javascript.png';
 import chatfuelImg from '../public/assets/chatfuel.png';
 import amplifyImg from '../public/assets/amplify.png';
 
