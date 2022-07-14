@@ -3,7 +3,7 @@ import Image from 'next/image';
 import kulcodeImg from '../public/assets/kulcode.png';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose,  } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import {useRouter} from 'next/router';
 
@@ -136,6 +136,9 @@ const Navbar = () => {
                 <Link href='https://www.instagram.com/kulcode/'>
                 <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <FaInstagram />
+                </div>
+                <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <AiOutlineMail />
                 </div>
                 </Link>
                 </div>
