@@ -9,6 +9,7 @@ import {FaInstagram} from 'react-icons/fa'
 const Body = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
+    <script id="62d1605bf9ab8e267a5710d6" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600">
