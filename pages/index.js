@@ -16,6 +16,7 @@ export default function Home() {
       </Head> 
       <Navbar />
       <Body/>
+      <script id="62d1605bf9ab8e267a5710d6" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
       <About />
       <Skills />
       <Projects />
