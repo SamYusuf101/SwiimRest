@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MessengerCustomerChat pageId="100487382681551" appId="608124193918816" />
-      <Navbar />
+
       <Body />
 
       <About />

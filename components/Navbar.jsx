@@ -1,144 +1,171 @@
 /* eslint-disable */
-import Image from 'next/image';
-import kulcodeImg from '../public/assets/kulcode.png';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import {useRouter} from 'next/router';
+import Image from "next/image";
+import kulcodeImg from "../public/assets/kulcode.png";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false)
-  const [shadow, setShadow] = useState(false)
-  const [navBg, setNavBg] = useState('#ecf0f3')
-  const [linkColor, setLinkColor] = useState('#1f2937')
-  const router=useRouter()
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const router = useRouter();
 
   useEffect(() => {
-     if(
-      router.asPath === '/cryptoTracker' ||
-      router.asPath === '/Nftapp' || 
-      router.asPath === '/Newsapp' ||
-      router.asPath === '/UberDriver' || 
-      router.asPath === '/UberEats'  
-
-
-
-     ){
-      setNavBg('transparent')
-      setLinkColor('#f8f8f8')
-     }else{
-      setNavBg('#ecf0f3')
-      setLinkColor('#1f2937')
-     }
-
-  },[router])
+    if (
+      router.asPath === "/cryptoTracker" ||
+      router.asPath === "/Nftapp" ||
+      router.asPath === "/Newsapp" ||
+      router.asPath === "/UberDriver" ||
+      router.asPath === "/UberEats"
+    ) {
+      setNavBg("transparent");
+      setLinkColor("#f8f8f8");
+    } else {
+      setNavBg("#ecf0f3");
+      setLinkColor("#1f2937");
+    }
+  }, [router]);
 
   const handleNav = () => {
-    setNav(!nav)
-  }
+    setNav(!nav);
+  };
 
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
-        setShadow(true)
+        setShadow(true);
       } else {
-        setShadow(false)
+        setShadow(false);
       }
-    }
-    window.addEventListener('scroll', handleShadow);
-  }, [])
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
   return (
-    <div 
-    style={{backgroundColor: `${navBg}`}}
-    className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
-      <div className='flex justify-between items-center  px-2 2xl:px-16'>
-        <Link href='/'>
-          <Image src={kulcodeImg} alt='/' width='85px' height='85px' />
+    <div
+      style={{ backgroundColor: `${navBg}` }}
+      className={
+        shadow ? " w-full h-20 shadow-xl z-[100]" : " w-full h-20 z-[100]"
+      }
+    >
+      <div className="flex z-50 fixed justify-between items-center  px-2 2xl:px-16">
+        <Link href="/">
+          <Image src={kulcodeImg} alt="/" width="85px" height="85px" />
         </Link>
         <div>
-          <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
-            <Link href='/'>
-              <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400'>Home</li>
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+            <Link href="/test">
+              <li className="ml-10 text-sm uppercase hover:border-b hover:text-blue-400">
+                Home
+              </li>
             </Link>
-            <Link href='/#about'>
-              <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400'>About</li>
+            <Link href="/#about">
+              <li className="ml-10 text-sm uppercase hover:border-b hover:text-blue-400">
+                About
+              </li>
             </Link>
-            <Link href='/#skills'>
-              <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400'>Skills</li>
+            <Link href="/#skills">
+              <li className="ml-10 text-sm uppercase hover:border-b hover:text-blue-400">
+                Skills
+              </li>
             </Link>
-            <Link href='/#projects'>
-              <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400 '>Projects</li>
+            <Link href="/#projects">
+              <li className="ml-10 text-sm uppercase hover:border-b hover:text-blue-400 ">
+                Projects
+              </li>
             </Link>
-            <Link href='/#contacts'>
-              <li className='ml-10 text-sm uppercase hover:border-b hover:text-blue-400'>Contact</li>
+            <Link href="/#contacts">
+              <li className="ml-10 text-sm uppercase hover:border-b hover:text-blue-400">
+                Contact
+              </li>
             </Link>
-
           </ul>
-          <div onClick={handleNav} className='md:hidden'>
+          <div onClick={handleNav} className="md:hidden">
             <AiOutlineMenu size={25} />
           </div>
         </div>
-
       </div>
-      <div className='md:hidden'>
-        <div className={nav ? 'fixed left-0 top-0 w-full h-screen bg-black/70' : ''} >
-          <div className={nav
-            ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
+      <div className="md:hidden">
+        <div className={nav ? " left-0 top-0 w-full h-screen bg-black/70" : ""}>
+          <div
+            className={
+              nav
+                ? " left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                : " left-[-100%] top-0 p-10 ease-in duration-500"
+            }
+          >
             <div>
-              <div className='flex w-full items-center justify-between '>
-              <Link href='/'>
-                <Image src={kulcodeImg} alt='/' width='85px' height='85px' />
+              <div className="flex w-full items-center justify-between ">
+                <Link href="/">
+                  <Image src={kulcodeImg} alt="/" width="85px" height="85px" />
                 </Link>
-                <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
+                <div
+                  onClick={handleNav}
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                >
                   <AiOutlineClose />
                 </div>
               </div>
-              <div className='border-b border-gray-300 my-5' >
-                <p className='w-[85%] md:w-[90%] py-4'>Let's build something legendary together</p>
+              <div className="border-b border-gray-300 my-5">
+                <p className="w-[85%] md:w-[90%] py-4">
+                  Let's build something legendary together
+                </p>
               </div>
             </div>
-            <div className='py-4 flex flex-col'>
-              <ul className='uppercase'>
-              
+            <div className="py-4 flex flex-col">
+              <ul className="uppercase">
                 <Link href="/">
-                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Home</li>
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                    Home
+                  </li>
                 </Link>
                 <Link href="/#about">
-                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>About</li>
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                    About
+                  </li>
                 </Link>
                 <Link href="/#skills">
-                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Skills</li>
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                    Skills
+                  </li>
                 </Link>
                 <Link href="/#projects">
-                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Projects</li>
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                    Projects
+                  </li>
                 </Link>
                 <Link href="/#contacts">
-                  <li onClick={()=> setNav(false)} className='py-4 text-sm'>Contact</li>
+                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                    Contact
+                  </li>
                 </Link>
               </ul>
-              <div className='my-20'>
-                <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
-                <div className='flex items-center justify-between my-4 w-full sm:[80%]'>
-                <Link href='https://www.linkedin.com/in/sam-yusuf-0753601a9'>
-                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
+              <div className="my-20">
+                <p className="uppercase tracking-widest text-[#5651e5]">
+                  Let's Connect
+                </p>
+                <div className="flex items-center justify-between my-4 w-full sm:[80%]">
+                  <Link href="https://www.linkedin.com/in/sam-yusuf-0753601a9">
+                    <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaLinkedinIn />
+                    </div>
                   </Link>
-                  <Link href= 'https://github.com/SamYusuf101'>
-                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
+                  <Link href="https://github.com/SamYusuf101">
+                    <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaGithub />
+                    </div>
                   </Link>
-                  <Link href='https://www.instagram.com/kulcode/'>
-                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaInstagram />
-                  </div>
+                  <Link href="https://www.instagram.com/kulcode/">
+                    <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                      <FaInstagram />
+                    </div>
                   </Link>
-                  <div className='my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <AiOutlineMail />
+                  <div className="my-2 rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <AiOutlineMail />
                   </div>
                 </div>
               </div>
@@ -147,7 +174,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
