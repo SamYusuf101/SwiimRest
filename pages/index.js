@@ -3,9 +3,12 @@ import Head from "next/head";
 import Script from "next/script";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
+import Data from "../components/Data";
+import Eatdata from "../components/Eatdata";
 import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
 
-export default function Home({ exploreData }) {
+export default function Home({ exploreData, cardsData, eatData }) {
   return (
     <div>
       <Head>
@@ -25,10 +28,34 @@ export default function Home({ exploreData }) {
         <main className="px-8 sm:px-16 max-w-6xl mx-auto">
           <section className="pt-6">
             <h2 className="text-4xl font-semibold pb-5">Search Nearby</h2>
-            {exploreData.map(({ img, location, distance }) => (
-              <Card img={img} distance={distance} location={location} />
-            ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {exploreData.map(({ img, location, distance }) => (
+                <Card img={img} distance={distance} location={location} />
+              ))}
+            </div>
           </section>
+          <section>
+            <h2 className="text-4xl font-semibold py-8">Swim anywhere</h2>
+            <div className="flex space-x-10 overflow-scroll scrollbar-hide p-3 -ml-3">
+              {cardsData.map(({ img, title }) => (
+                <Data img={img} title={title} />
+              ))}
+            </div>
+          </section>
+          <section>
+            <h2 className="text-4xl font-semibold py-8">Eat anywhere</h2>
+            <div className="flex space-x-10 overflow-scroll scrollbar-hide p-3 -ml-3">
+              {eatData.map(({ img, title }) => (
+                <Eatdata img={img} title={title} />
+              ))}
+            </div>
+          </section>
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Wishlists curated by SwimRest"
+            buttonText="Get Inspired"
+          />
         </main>
       </div>
     </div>
@@ -40,9 +67,19 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+    (res) => res.json()
+  );
+
+  const eatData = await fetch("https://www.jsonkeeper.com/b/VHHT").then((res) =>
+    res.json()
+  );
+
   return {
     props: {
       exploreData,
+      cardsData,
+      eatData,
     },
   };
 }
