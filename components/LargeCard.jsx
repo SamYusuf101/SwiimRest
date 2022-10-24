@@ -3,7 +3,7 @@ import React from "react";
 
 function LargeCard({ img, title, description, buttonText }) {
   return (
-    <div className="pt-10 pb-10">
+    <div className="pt-10">
       <div className="relative h-80 w-100  ">
         <Image
           src={img}

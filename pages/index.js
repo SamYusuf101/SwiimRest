@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Data from "../components/Data";
 import Eatdata from "../components/Eatdata";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 
@@ -57,6 +58,9 @@ export default function Home({ exploreData, cardsData, eatData }) {
             buttonText="Get Inspired"
           />
         </main>
+        <div className=" ">
+          <Footer />
+        </div>
       </div>
     </div>
   );
