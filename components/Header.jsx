@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import kulcodeImg from "../public/assets/kulcode.png";
 import {
-  AiOutlineArrowUp,
-  AiOutlineMail,
   AiOutlineMenu,
   AiOutlineSearch,
   AiOutlineUser,
   AiOutlineGlobal,
 } from "react-icons/ai";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { DateRangePicker } from "react-date-range";
 
 function Header() {
+  const [searchInput, setSearchInput] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const selectionRange = {
+    startDate: startDate,
+    endDate: endDate,
+    key: "selection",
+  };
+
+  const handleSelect = (ranges) => {
+    setStartDate(ranges.selection.startDate);
+    setEndDate(ranges.selection.endDate);
+  };
+
   return (
     <header className="items-center sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
       <div className="relative h-10 flex items-center  my-auto">
@@ -30,6 +46,8 @@ function Header() {
       rounded-full md:shadow-sm "
       >
         <input
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           type="text"
           placeholder="start your search"
           className="pl-5 p-1 bg-transparent outline-none flex-grow rounded-full
@@ -59,6 +77,27 @@ function Header() {
           />
         </div>
       </div>
+
+      {searchInput && (
+        <div className="flex flex-col col-span-3 mx-auto ">
+          <DateRangePicker
+            ranges={[selectionRange]}
+            minDate={new Date()}
+            rangeColors={"bg-blue-500"}
+            onChange={handleSelect}
+          />
+          <div className="flex items-center border-b mb-4">
+            <h2 className="text-2xl flex-grow font-semibold">
+              Number of guest
+            </h2>
+            <AiOutlineUser className="h-5" />
+            <input
+              type="number"
+              className="w-12 pl-2 text-lg outline-none text-blue-400"
+            />
+          </div>
+        </div>
+      )}
     </header>
   );
 }
