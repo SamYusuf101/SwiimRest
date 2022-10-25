@@ -3,9 +3,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
+import SearchCard from "../components/SearchCard";
 
-function Search() {
+function Search({ searchResults }) {
   const router = useRouter();
+
   const { location, startDate, endDate, noOfGuests } = router.query;
 
   const formattedStartDate = format(new Date(startDate), "dd MMM yyy");
@@ -15,7 +17,7 @@ function Search() {
   router.query;
   return (
     <div>
-      <Header />
+      <Header placeholder={`${location} | ${range} | ${noOfGuests} guest `} />
 
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
@@ -43,6 +45,23 @@ function Search() {
               <p>More Filters</p>
             </button>
           </div>
+
+          <div className="flex flex-col">
+            {searchResults.map(
+              ({ img, location, title, description, star, price, total }) => (
+                <SearchCard
+                  key={img}
+                  img={img}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                  location={location}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
       <Footer />
@@ -51,3 +70,13 @@ function Search() {
 }
 
 export default Search;
+
+export async function getServerSideProps() {
+  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
+    (res) => res.json()
+  );
+
+  return {
+    props: { searchResults },
+  };
+}
