@@ -7,7 +7,7 @@ function Banner() {
   return (
     <div
       className="relative h-[300px] sm:h-[400px] ld:h-[500px] xl:h-[600px]
-    2xl:h-[700px]"
+    2xl:h-[600px]"
     >
       <Image
         src={hoobankImg}
