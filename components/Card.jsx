@@ -5,7 +5,7 @@ import Image from "next/image";
 function Card({ img, location, distance }) {
   return (
     <div
-      className="flex space-y-4 items-center mt-5 rounded-xl cursor-pointer
+      className="flex space-y-4 items-center mt-6 rounded-xl cursor-pointer
     hover:bg-gray-100 hover:scale-105 transition transformation duration-200
     ease-out"
     >
