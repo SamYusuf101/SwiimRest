@@ -23,7 +23,7 @@ function Card({ img, location, distance }) {
       </div>
       <div className="flex flex-col pl-3">
         <p>{location}</p>
-        <p className="text-gray-500">{distance}</p>
+        <p className="text-gray-400">{distance}</p>
       </div>
     </div>
   );
