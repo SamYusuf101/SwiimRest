@@ -30,7 +30,7 @@ function Footer() {
         <p>How SwimRest Works</p>
         <p>Newsroom</p>
         <p>Investors</p>
-        <p>SwimRest plus</p>
+        <p>SwimRest pluss</p>
         <p>SwimRest plus</p>
       </div>
 
