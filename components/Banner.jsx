@@ -20,7 +20,7 @@ function Banner() {
         <p className="text-white text-sm sm:text-lg">
           Not sure where to swim or eat?
         </p>{" "}
-        <div className="pt-8">
+        <div className="pt-9">
           <button
             className="text-white bg-gray-400 shadow-md px-4 rounded-full p-2
           font-bold hover:shadow-xl active:scale-90 transition duration-150"
