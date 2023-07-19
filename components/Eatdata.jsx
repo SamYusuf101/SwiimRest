@@ -14,7 +14,7 @@ function Eatdata({ img, title }) {
           alt="/"
           objectFit="cover"
           layout="fill"
-          className="rounded-lg"
+          className="rounded-full"
         />
       </div>
       <h2 className="text-2xl mt-3">{title}</h2>
