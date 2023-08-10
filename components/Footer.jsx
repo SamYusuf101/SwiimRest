@@ -7,7 +7,7 @@ function Footer() {
       className="pt-10 grid grid-cols-3  md:grid-cols-4 gap-y-10 
     px-32 py-14 bg-gray-200 text-gray-300"
     >
-      <div className="space-y-4 text-xs text-gray-800">
+      <div className="space-y-3 text-xs text-gray-800">
         <h5 className="font-bold">About</h5>
         <p>How SwimRest Works</p>
         <p>Newsroom</p>
